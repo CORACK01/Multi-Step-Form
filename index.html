@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step-Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <form>
+        <div class="form-progress" aria-label="shows the steps of the form">
+            <div style="--step-number:'1';" class="form-step">
+                <div>
+                    <span>STEP 1</span>
+                    <p>YOUR INFO</p>
+                </div>
+            </div>
+            <div style="--step-number:'2';" class="form-step">
+                <div>
+                    <span>STEP 2</span>
+                    <p>SELECT PLAN</p>
+                </div>
+            </div>
+            <div style="--step-number:'3';" class="form-step">
+                <div>
+                    <span>STEP 3</span>
+                    <p>ADD-ONS</p>
+                </div>
+            </div>
+            <div style="--step-number:'4';" class="form-step">
+                <div>
+                    <span>STEP 4</span>
+                    <p>SUMMARY</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-element" aria-label="form to be filled" >
+            <h1>Personal Info</h1>
+            <p>Please provide your name, email address and phone number</p>
+            <label class="text-label" for="Name">Name<input placeholder="e.g. Stephen King" type="text" name="Name" id="Name"></label>
+            <label class="text-label" for="Email Address">Email Address<input placeholder="e.g. stephenking@lorem.com"  type="email" name="Email Address" id="Email Address"></label>
+            <label class="text-label" for="Phone Number">Phone Number<input placeholder="e.g. +1 234 567 890"  type="text" name="Phone Number" id="Phone Number"></label>
+        </div>
+        <div class="form-element" aria-label="form to be filled" >
+            <h1>Select your plan</h1>
+            <p>You have the option of monthly or yearly billing</p>
+            <label style="--element-image:url('assets/joystick.svg');--element-color:#fdc344;" class="radio-label" for="Arcade">
+                <div>
+                    <span data-title>Arcade</span>
+                    <p data-price>$10/mo</p>
+                    <input type="radio" name="plan" value="Arcade" id="Arcade">
+                </div>
+            </label>
+            <label style="--element-image:url('assets/controller.svg');--element-color:#fd6044;" class="radio-label" for="Advanced">
+                <div>
+                    <span data-title>Advanced</span>
+                    <p data-price>$12/mo</p>
+                    <input type="radio" name="plan" value="Advanced" id="Advanced">
+                </div>
+            </label>
+            <label style="--element-image:url('assets/gamepad.svg');--element-color:#4475fd;" class="radio-label" for="Pro">
+                <div>
+                    <span data-title>Pro</span>
+                    <p data-price>$15/mo</p>
+                    <input type="radio" name="plan" value="Pro" id="Pro">
+                </div>
+            </label>
+            <label for="plan-period" class="toggle-label">
+                <span>Monthly</span>
+                <div class="toggle-inner">
+                    <input type="checkbox" name="plan-period" id="plan-period">
+                </div>
+                <span>Yearly</span>
+            </label>
+        </div>
+        <div class="form-element" aria-label="form to be filled" >
+            <h1>Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience</p>
+            <label class="check-label" for="add-on-1">
+                <input type="checkbox" name="add-on-1" value="add-on-1" id="add-on-1">
+                <div>
+                    <span data-title>Online Services</span>
+                    <p>Access to multiplayer games</p>
+                </div>
+                <span data-price>+$1/mo</span>
+            </label>
+            <label class="check-label" for="add-on-2">
+                <input type="checkbox" name="add-on-2" value="add-on-2" id="add-on-2">
+                <div>
+                    <span data-title>Larger Storage</span>
+                    <p>Extra 1TB of cloud storage</p>
+                </div>
+                <span data-price>+$2/mo</span>
+            </label>
+            <label class="check-label" for="add-on-3">
+                <input type="checkbox" name="add-on-3" value="add-on-3" id="add-on-3">
+                <div>
+                    <span data-title>Customizable Profile</span>
+                    <p>Customize theme on your profile</p>
+                </div>
+                <span data-price>+$2/mo</span>
+            </label>
+        </div>
+        <div class="form-element" aria-label="SUMMARY" >
+            <h1>Finishing up</h1>
+            <p>Double-check everything looks OK before confirming</p>
+            <div class="wrapper">
+            </div>
+            <div data-total class="field">
+                <p>Total (per month)</p>
+                <span>+$12/mo</span>
+            </div>
+        </div>
+        <div class="form-element form-over">
+            <div class="image">
+                <img src="assets/thankYou.svg" alt="">
+            </div>
+            <h1>Thank You!!</h1>
+            <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@lorem.com</p>
+            <button class="CTA">Run Again</button>
+        </div>
+        <div class="bottom">
+            <button class="previous">Go back</button>
+            <button class="next">Next Step</button>
+            <button class="finish" type="submit">Confirm</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
